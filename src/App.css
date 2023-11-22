@@ -1,0 +1,39 @@
+* {
+  font-family: "tacitus-pro", sans-serif;
+}
+
+.bgImage {
+  height: 0;
+    padding: 0; /* remove any pre-existing padding, just in case */
+    padding-bottom: 21%; /* for a 4:3 aspect ratio */
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    }
+
+
+.animation-custom {
+  animation: MoveUpDown 5s linear infinite;
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 100px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+.imgSun:hover {
+display:none}
+.imgSun:hover + .imgSunGif {
+display:block;
+    
+}
+
+
