@@ -26,14 +26,27 @@
     bottom: 100px;
   }
 }
+.animation-custom1 {
+  animation: MoveUpDown1 5s linear infinite;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes MoveUpDown1 {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: 100px;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
 .imgSun:hover {
-display:none}
+opacity:0}
 .imgSun:hover + .imgSunGif {
-display:block;
-    
+    opacity:1;
 }
 
 

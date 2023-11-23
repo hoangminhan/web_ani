@@ -10,6 +10,7 @@ import imageTear from "./assets/tear.png";
 import imageHeartBurn from "./assets/heart-burn.png";
 import imgHandOn from "./assets/hand-on.svg";
 import imgHandBelow from "./assets/hand-below.svg";
+import eyeClose from "./assets/eyes.png";
 
 import iCloudHumand from "./assets/cloud-human.png";
 
@@ -31,63 +32,65 @@ import imgHeart from "./assets/heart.png";
 import imgBgF7 from "./assets/bg-f7.png";
 import imgSun from "./assets/sun.png";
 import imgSunWrap from "./assets/wrap-sun.png";
-import imgSunWrapGif from "./assets/sun.gif";
+import imgSunWrapGif from "./assets/mattroi.gif";
 
 function App() {
   return (
-    <div className="bg-black min-h-[100vh] w-full  mx-auto text-[#fff]">
+    <div className="bg-black min-h-[100vh] w-full  mx-auto text-[#fff] overflow-hidden">
       {/* frame 5 */}
-      <div
-        style={{ backgroundImage: `url(${imgBgF5})` }}
-        // className="bg-red-100"
-      >
+      <div>
         {/* night sleep */}
-        <div style={{ backgroundImage: `url(${startF5})` }}>
+        <div
+          className="relative bgImage pb-[71%]"
+          style={{ backgroundImage: `url(${imgBgF6Bottom})` }}
+        >
           <div
-            // bg-no-repeat  relative
-            className="bgImage relative pt-[200px]"
-            style={{
-              backgroundImage: `url(${imagenight})`,
-            }}
+            className="bgImage pb-[70%] absolute left-0 right-0 top-[0%]"
+            style={{ backgroundImage: `url(${startF52})` }}
           >
-            <a
-              href="#frame6"
-              className="absolute text-[#E7444F] font-bold top-[25%] xl:top-[30%] left-[30%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+            <div
+              className="bgImage absolute left-0 right-0 top-[50%] -translate-y-1/2"
+              style={{
+                backgroundImage: `url(${imagenight})`,
+              }}
             >
-              Last Night
-            </a>
-            <p className="flex gap-4 font-bold absolute bottom-[17%] xl:bottom-[20%] right-[24%] text-[82px]">
-              <span>ASILAY</span>
-              <span className="text-[#E7444F]">SLEEPING</span>
-            </p>
-            <p className="uppercase font-light text-[32px] absolute bottom-[20%] right-[5%] xl:right-[8%]">
-              by antonio machado
-            </p>
+              <a
+                href="#frame6"
+                className="absolute text-[#E7444F] font-bold xl:top-[15%] left-[30%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+              >
+                Last Night
+              </a>
+              <p className="flex gap-4 font-bold absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px]">
+                <span>AS I LAY</span>
+                <span className="text-[#E7444F]">SLEEPING</span>
+              </p>
+              <p className="uppercase font-light text-[32px] absolute bottom-[-5%] xl:bottom-[2%] right-0 xl:right-[8%]">
+                by antonio machado
+              </p>
+            </div>
           </div>
         </div>
 
         {/*  */}
-        <div style={{ backgroundImage: `url(${startF52})` }}>
-          <div
-            className="bgImage relative mt-[200px]"
-            style={{ backgroundImage: `url(${imagenight})` }}
-          >
-            <p className="absolute text-[#E7444F] font-light top-[10%] xl:top-[20%] left-[30%] text-[70px]">
-              Last Night
-            </p>
-            <p className="flex gap-4 font-light absolute bottom-[-5%] xl:bottom-[8%] right-[25%] text-[70px]">
-              <span>AS I WAS</span>
-              <span className="text-[#E7444F]">SLEEPING</span>
-            </p>
-          </div>
+        <div style={{ backgroundImage: `url(${imgBgF5})` }}>
+          <div style={{ backgroundImage: `url(${startF52})` }}>
+            <div
+              className="bgImage relative"
+              style={{ backgroundImage: `url(${imagenight})` }}
+            >
+              <p className="absolute text-[#E7444F] font-light top-[10%] xl:top-[20%] left-[30%] text-[70px]">
+                Last Night
+              </p>
+              <p className="flex gap-4 font-light absolute bottom-[-5%] xl:bottom-[8%] right-[25%] text-[70px]">
+                <span>AS I WAS</span>
+                <span className="text-[#E7444F]">SLEEPING</span>
+              </p>
+            </div>
 
-          {/* cloud and people */}
-          <div
-            className="bg-transparent mt-[200px]"
-            // className="bgImage relative mt-[200px]"
-            // style={{ backgroundImage: `url(${iCloudHumand})` }}
-          >
-            <img src={iCloudHumand} alt="" />
+            {/* cloud and people */}
+            <div className="relative  mt-[200px] overflow-hidden">
+              <img src={iCloudHumand} alt="" className="scale-105 " />
+            </div>
           </div>
         </div>
       </div>
@@ -105,7 +108,7 @@ function App() {
           >
             <img src={imgBgF6Black} alt="" className="absolute inset-0" />
             <div
-              className="bgImage pt-[300px] relative"
+              className="bgImage pt-[300px] relative "
               style={{ backgroundImage: `url(${imagenight})` }}
             >
               <a
@@ -123,7 +126,7 @@ function App() {
           {/* bg top */}
 
           <div
-            className="bgImage pb-[31%]"
+            className="bgImage pb-[31%] scale-105 overflow-hidden"
             style={{ backgroundImage: `url(${iCloudHumand})` }}
           ></div>
         </div>
@@ -154,7 +157,11 @@ function App() {
                 </p>
               </div>
               <div>
-                <img src={imgHeartGif} alt="" className="relative z-50" />
+                <img
+                  src={imgHeartGif}
+                  alt=""
+                  className="relative z-50 w-[3200px] h-auto xxl:scale-125"
+                />
               </div>
             </div>
           </div>
@@ -198,7 +205,7 @@ function App() {
           {/* bg top */}
 
           <div
-            className="bgImage pb-[31%] "
+            className="bgImage pb-[31%]  scale-105"
             style={{ backgroundImage: `url(${iCloudHumand})` }}
           ></div>
         </div>
@@ -209,22 +216,56 @@ function App() {
           className="bgImage pb-[71%] relative"
           style={{ backgroundImage: `url(${midBgImg})` }}
         >
-          <div>
-            {/* <img
-              src={imgSun}
-              alt=""
-              className="absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2"
-            /> */}
-            {/* <img
+          <div className="group">
+            <div className="absolute left-[50%] top-[51%] xl:top-[50%] -translate-x-1/2 -translate-y-1/2 xxl:scale-110 w-[500px] h-[500px] ">
+              <img
+                src={imgSun}
+                alt=""
+                className={`absolute left-[50%] top-[51%] xl:top-[50%] -translate-x-1/2 -translate-y-1/2 xxl:scale-110 `}
+              />
+              <img
+                src={eyeClose}
+                alt=""
+                className="absolute top-[27.8%] xxl:top-[25.9%] w-[292px] h-0 group-hover:h-[44px] duration-300 ease-in-out left-[20.9%] xxl:left-[20.8%] xxl:scale-110 "
+              />
+            </div>
+
+            <img
               src={imgSunWrap}
               alt=""
-              className="imgSun absolute left-[50%] top-[46%] -translate-x-1/2 -translate-y-1/2"
-            /> */}
+              className="imgSun absolute left-[50%] top-[46%] 2xl:top-[46.4%] xxl:top-[47%] xxl:scale-110 -translate-x-1/2 -translate-y-1/2 z-50"
+            />
+
             <img
               src={imgSunWrapGif}
               alt=""
-              className="imgSunGif  absolute left-[49%] top-[41%] -translate-x-1/2 -translate-y-1/2 w-[700px] z-50"
+              className="imgSunGif opacity-0 absolute left-[50%] top-[46%] 2xl:top-[46.4%] xxl:top-[47%] -translate-x-1/2 -translate-y-1/2 w-[700px] z-40 xxl:scale-110"
             />
+          </div>
+
+          {/*  */}
+          <div className="absolute left-[5%] top-[15%] leading-[120px]">
+            <p className="text-[#fff] uppercase text-[80px]">That a</p>
+            <p className="text-[#D9495A] uppercase text-[140px]">fierry sun</p>
+          </div>
+          <div className="absolute left-[5%] top-[40%]">
+            <p className="text-[#D9495A] uppercase text-[220px]">Light</p>
+          </div>
+          <div className="absolute left-[5%] top-[65%]">
+            <p className=" uppercase text-[80px]">inside</p>
+          </div>
+          {/* right */}
+          <div className="absolute right-[5%] top-[20%]">
+            <p className=" uppercase text-[140px]">was</p>
+          </div>
+          <div className="absolute right-[5%] top-[30%]">
+            <p className=" uppercase text-[220px] text-[#D9495A]">giving</p>
+          </div>
+          <div className="absolute right-[5%] top-[55%]">
+            <p className=" uppercase text-[80px]">my</p>
+          </div>
+          <div className="absolute right-[5%] top-[60%]">
+            <p className=" uppercase text-[220px] text-[#D9495A]">heart</p>
           </div>
         </div>
         {/* bg bottom */}
@@ -241,18 +282,34 @@ function App() {
           <div className="absolute top-[55%] -translate-y-1/2 left-[5%] xl:left-[10%] xl:right-[10%] right-[5%] flex gap-16 justify-center">
             <img
               src={imageHeartBurn}
-              className="animation-custom left-0"
+              className="animation-custom left-0 xxl:scale-150 "
               alt=""
             />
 
-            <p className="flex-1 text-[64px] leading-[64px] uppercase font-light max-w-[500px] hover:opacity-60 duration-200">
-              It was <span className="text-[#D9495A]">fiery</span> because I
-              felt <span className="text-[#D9495A]">warmth</span> as from a{" "}
-              <span className="text-[#D9495A]">hearth</span>, and sun because it{" "}
-              <span className="text-[#D9495A]">gave light</span> and{" "}
-              <span className="text-[#D9495A]">brought tears</span> to my eyes.
-            </p>
-            <img src={imageTear} alt="" className="animation-custom right-0" />
+            <div className="break-normal flex-1 text-[64px] leading-[64px] xxl:leading-[80px] uppercase font-light max-w-[520px] hover:opacity-60 duration-200">
+              <p>
+                It was <span className="text-[#D9495A]">fiery</span> because I
+                felt
+              </p>
+              <p>
+                <span className="text-[#D9495A]">warmth</span> as from a
+                <span className="text-[#D9495A]"> hearth</span>,
+              </p>
+              <p>
+                and sun because it
+                <span className="text-[#D9495A]"> gave light</span>
+              </p>
+              <p>
+                and
+                <span className="text-[#D9495A]"> brought tears</span> to my
+                eyes.
+              </p>
+            </div>
+            <img
+              src={imageTear}
+              alt=""
+              className="animation-custom1 right-0 xxl:scale-150"
+            />
           </div>
           {/* hand below */}
           <div
@@ -288,7 +345,7 @@ function App() {
           <img
             src={iCloudHumand}
             alt=""
-            className="absolute left-0 right-0 bottom-0"
+            className="absolute left-0 scale-105 right-0 bottom-0"
           />
         </div>
       </div>
@@ -321,7 +378,7 @@ function App() {
           {/* bg top */}
 
           <div
-            className="bgImage pb-[31%]"
+            className="bgImage pb-[31%]  scale-105"
             style={{ backgroundImage: `url(${iCloudHumand})` }}
           ></div>
         </div>
@@ -354,10 +411,10 @@ function App() {
                 Last Night
               </p>
               <p className="flex gap-4 font-bold absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px]">
-                <span>ASILAY</span>
+                <span>AS I LAY</span>
                 <span className="text-[#E7444F]">SLEEPING</span>
               </p>
-              <p className="uppercase font-light text-[32px] absolute bottom-[-5%] xl:bottom-[2%] right-0 xl-right-[8%]">
+              <p className="uppercase font-light text-[32px] absolute bottom-[-5%] xl:bottom-[2%] right-0 xl:right-[8%]">
                 by antonio machado
               </p>
             </div>
