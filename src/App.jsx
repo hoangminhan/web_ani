@@ -56,19 +56,13 @@ function App() {
                 backgroundImage: `url(${imagenight})`,
               }}
             >
-              <a
-                href="#frame6"
-                className="absolute text-[#E7444F] font-bold top-[3%] 2xl:top-[15%] left-[30%] text-[93px] opacity-80 hover:opacity-100 duration-200 uppercase"
-              >
+              <p className="absolute text-[#E7444F] font-bold top-[3%] 2xl:top-[15%] left-[30%] text-[93px] opacity-80 hover:opacity-100 duration-200 uppercase">
                 Last Night
-              </a>
-              <a
-                href="#frame6"
-                className="flex gap-4 font-bold absolute bottom-[-12%] 2xl:bottom-[2%] right-[24%] text-[93px] opacity-80 hover:opacity-100 duration-200"
-              >
+              </p>
+              <p className="flex gap-4 font-bold absolute bottom-[-12%] 2xl:bottom-[2%] right-[24%] text-[93px] opacity-80 hover:opacity-100 duration-200">
                 <span>AS I LAY</span>
                 <span className="text-[#E7444F]">SLEEPING</span>
-              </a>
+              </p>
               <p className="uppercase font-light text-[37px] absolute bottom-[-5%] xl:bottom-[2%] right-0 xl:right-[8%]">
                 by antonio machado
               </p>
@@ -187,16 +181,16 @@ function App() {
         >
           <div className="absolute left-0 top-[10%] right-0 flex flex-col items-center justify-center">
             <div className="relative">
-              <p className="flex font-light text-[#E7444F]  uppercase absolute left-[7%] top-[0%] text-[152px] 2xl:text-[192px]">
+              <p className="flex font-light text-[#E7444F]  uppercase absolute left-[7%] top-[-5%] text-[152px] 2xl:text-[192px] items-baseline">
                 <span className="text-white pr-5 text-[102px] 2xl:text-[142px]">
                   that's a
-                </span>{" "}
+                </span>
                 spring
               </p>
-              <p className="flex font-light text-[#E7444F] text-[152px] 2xl:text-[192px] uppercase absolute right-[5%] top-[10%]">
+              <p className="flex items-baseline font-light text-[#E7444F] text-[152px] 2xl:text-[192px] uppercase absolute right-[5%] top-[5%]">
                 <span className="text-white pr-5 text-[102px] 2xl:text-[142px]">
                   was
-                </span>{" "}
+                </span>
                 breaking
               </p>
               <p className="flex font-light text-[#E7444F] text-[415px] 2xl:text-[517px] uppercase absolute left-[6%] bottom-[-8%]">
