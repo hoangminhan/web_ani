@@ -5,7 +5,7 @@ import midBgImg from "./assets/mid-bg.png";
 import midBgImgF8 from "./assets/bg-f8-middle.gif";
 import bottomBgImg from "./assets/bot-bg.png";
 import imageWater from "./assets/waterflow.gif";
-import imageWaterGif from "./assets/waterflow1.gif";
+import imageWaterGif from "./assets/waterflow2.gif";
 import imgLake from "./assets/lake.png";
 import flowAnimation from "./assets/flow_ani.gif";
 
@@ -138,7 +138,7 @@ function App() {
 
             {/* cloud and people */}
             <div className="relative  mt-[200px] overflow-hidden">
-              <img src={iCloudHumand} alt="" className="scale-105 " />
+              <img src={iCloudHumand} alt="" className="scale-105 w-full" />
             </div>
           </div>
         </div>
@@ -302,7 +302,7 @@ function App() {
           {/* bg top */}
 
           <div
-            className="bgImage pb-[31%]  scale-105"
+            className="bgImage pb-[31%]  scale-105 w-full"
             style={{ backgroundImage: `url(${iCloudHumand})` }}
           ></div>
         </div>
@@ -486,7 +486,7 @@ function App() {
           <img
             src={iCloudHumand}
             alt=""
-            className="absolute left-0 scale-105 right-0 bottom-0"
+            className="absolute left-0 scale-105 right-0 bottom-0 w-full"
           />
         </div>
       </div>
