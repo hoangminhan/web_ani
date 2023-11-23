@@ -240,7 +240,11 @@ function App() {
             // className="relative"
             style={{ backgroundImage: `url(${startF52})` }}
           >
-            <img src={imgBgF6Black} alt="" className="absolute inset-0" />
+            <img
+              src={imgBgF6Black}
+              alt=""
+              className="absolute inset-0 w-full"
+            />
             <div
               className="bgImage pt-[300px] relative"
               style={{ backgroundImage: `url(${imagenight})` }}
@@ -420,7 +424,7 @@ function App() {
           className="relative bgImage pb-[70%]"
           style={{ backgroundImage: `url(${imgBgF6Bottom})` }}
         >
-          <img src={imgBgF6Black} alt="" className="absolute inset-0" />
+          <img src={imgBgF6Black} alt="" className="absolute inset-0 w-full" />
 
           <div
             className="bgImage pb-[80%] absolute left-0 right-0 top-[0%]"
@@ -536,7 +540,7 @@ function App() {
           <img
             src={imgBgF6Black}
             alt=""
-            className="absolute top-0 left-0 right-0 w-full h-[400px] xl:h-[800px]"
+            className="absolute top-0 left-0 right-0 w-full h-[400px] xl:h-[800px] w-full"
           />
           <div
             className="bgImage pb-[70%] absolute left-0 right-0 top-[0%]"
