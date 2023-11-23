@@ -30,8 +30,13 @@ import imgBgF7 from "./assets/bg-f7.png";
 import imgSun from "./assets/sun.png";
 import imgSunWrap from "./assets/wrap-sun.png";
 import imgSunWrapGif from "./assets/mattroi.gif";
+import { useState } from "react";
 
 function App() {
+  const [showLastNight1, setShowLastNight1] = useState(true);
+  const [showLastNight2, setShowLastNight2] = useState(true);
+  const [showLastNight3, setShowLastNight3] = useState(true);
+  console.log({ showLastNight1 });
   return (
     <div className="bg-black min-h-[100vh] w-full  mx-auto text-[#fff] overflow-hidden">
       {/* frame 5 */}
@@ -53,18 +58,18 @@ function App() {
             >
               <a
                 href="#frame6"
-                className="absolute text-[#E7444F] font-bold top:-[10%] xl:top-[15%] left-[30%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+                className="absolute text-[#E7444F] font-bold top-[3%] 2xl:top-[15%] left-[30%] text-[93px] opacity-80 hover:opacity-100 duration-200 uppercase"
               >
                 Last Night
               </a>
               <a
                 href="#frame6"
-                className="flex gap-4 font-bold absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+                className="flex gap-4 font-bold absolute bottom-[-12%] 2xl:bottom-[2%] right-[24%] text-[93px] opacity-80 hover:opacity-100 duration-200"
               >
                 <span>AS I LAY</span>
                 <span className="text-[#E7444F]">SLEEPING</span>
               </a>
-              <p className="uppercase font-light text-[32px] absolute bottom-[-5%] xl:bottom-[2%] right-0 xl:right-[8%]">
+              <p className="uppercase font-light text-[37px] absolute bottom-[-5%] xl:bottom-[2%] right-0 xl:right-[8%]">
                 by antonio machado
               </p>
             </div>
@@ -78,19 +83,57 @@ function App() {
               className="bgImage relative"
               style={{ backgroundImage: `url(${imagenight})` }}
             >
-              <a
-                href="#frame6"
-                className="absolute text-[#E7444F] font-light top:-[10%] xl:top-[15%] left-[30%]  text-[82px] opacity-80 hover:opacity-100 duration-200"
+              <p
+                onClick={() => {
+                  setShowLastNight1(!showLastNight1);
+                }}
+                className={`absolute text-[#E7444F] font-light top-[3%] 2xl:top-[15%] left-[30%] text-[93px] transition-all duration-200 ease-linear uppercase ${
+                  showLastNight1
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
               >
                 Last Night
-              </a>
-              <a
-                href="#frame6"
-                className="flex gap-4 font-light absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+              </p>
+              <p
+                onClick={() => {
+                  setShowLastNight1(!showLastNight1);
+                }}
+                className={`flex gap-4 font-light absolute bottom-[-12%] 2xl:bottom-[2%] right-[24%] text-[93px] opacity-80 hover:opacity-100 transition-all duration-200 ease-linear ${
+                  showLastNight1
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
               >
                 <span>AS I WAS</span>
                 <span className="text-[#E7444F]">SLEEPING</span>
-              </a>
+              </p>
+
+              {/* errror toggle */}
+              <p
+                onClick={() => {
+                  setShowLastNight1(!showLastNight1);
+                }}
+                className={`absolute text-[#fff] font-light bottom-[-15%] 2xl:bottom-[-5%] left-[26%] text-[93px] opacity-80 hover:opacity-100 transition-all duration-200 ease-linear ${
+                  !showLastNight1
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
+              >
+                I DREAMT
+              </p>
+              <p
+                onClick={() => {
+                  setShowLastNight1(!showLastNight1);
+                }}
+                className={`flex gap-4 text-[#E7444F] font-light absolute top-[1%] 2xl:top-[10%] right-[26%] text-[93px] rotate-[-6deg] transition-all duration-200 ease-linear ${
+                  !showLastNight1
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
+              >
+                A MARVERLOUS ERROR
+              </p>
             </div>
 
             {/* cloud and people */}
@@ -108,7 +151,7 @@ function App() {
           className="relative"
         >
           {/* night sleep */}
-          <div
+          {/* <div
             // className="relative"
             style={{ backgroundImage: `url(${startF52})` }}
           >
@@ -119,22 +162,22 @@ function App() {
             >
               <a
                 href="#frame7"
-                className="absolute text-[#fff] font-light bottom-[20%] left-[26%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+                className="absolute text-[#fff] font-light bottom-[15%] 2xl:bottom-[18%] left-[26%] text-[93px] opacity-80 hover:opacity-100 duration-200"
               >
                 I DREAMT
               </a>
-              <p className="flex gap-4 text-[#E7444F] font-light absolute top-[30%] right-[26%] text-[82px] rotate-[-6deg]">
+              <p className="flex gap-4 text-[#E7444F] font-light absolute top-[25%] right-[26%] text-[93px] rotate-[-6deg]">
                 A MARVERLOUS ERROR
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* bg top */}
 
-          <div
+          {/* <div
             className="bgImage pb-[31%] scale-105 overflow-hidden"
             style={{ backgroundImage: `url(${iCloudHumand})` }}
-          ></div>
+          ></div> */}
         </div>
 
         {/* bg mid f6 */}
@@ -144,27 +187,27 @@ function App() {
         >
           <div className="absolute left-0 top-[10%] right-0 flex flex-col items-center justify-center">
             <div className="relative">
-              <p className="flex font-light text-[#E7444F]  uppercase absolute left-[7%] top-[0%] text-[137px] 2xl:text-[177px]">
-                <span className="text-white pr-5 text-[87px] 2xl:text-[127px]">
+              <p className="flex font-light text-[#E7444F]  uppercase absolute left-[7%] top-[0%] text-[152px] 2xl:text-[192px]">
+                <span className="text-white pr-5 text-[102px] 2xl:text-[142px]">
                   that's a
                 </span>{" "}
                 spring
               </p>
-              <p className="flex font-light text-[#E7444F] text-[137px] 2xl:text-[177px] uppercase absolute right-[5%] top-[10%]">
-                <span className="text-white pr-5 text-[87px] 2xl:text-[127px]">
+              <p className="flex font-light text-[#E7444F] text-[152px] 2xl:text-[192px] uppercase absolute right-[5%] top-[10%]">
+                <span className="text-white pr-5 text-[102px] 2xl:text-[142px]">
                   was
                 </span>{" "}
                 breaking
               </p>
-              <p className="flex font-light text-[#E7444F] text-[400px] 2xl:text-[502px] uppercase absolute left-[6%] bottom-[-5%]">
+              <p className="flex font-light text-[#E7444F] text-[415px] 2xl:text-[517px] uppercase absolute left-[6%] bottom-[-8%]">
                 out
               </p>
-              <div className="flex font-light text-[#E7444F] text-[250px] 2xl:text-[312px] uppercase absolute right-[5%] bottom-[0%]">
+              <div className="flex font-light text-[#E7444F] text-[265px] 2xl:text-[327px] uppercase absolute right-[5%] bottom-[0%]">
                 Heart
-                <p className="absolute top-[-20%] 2xl:top-[-20%] left-0 text-[91px] 2xl:text-[131px] text-white">
+                <p className="absolute top-[-20%] 2xl:top-[-20%] left-0 text-[106px] 2xl:text-[146px] text-white">
                   In
                 </p>
-                <p className="absolute top-[-20%] 2xl:top-[-20%] right-0 text-[91px] 2xl:text-[131px] text-white">
+                <p className="absolute top-[-20%] 2xl:top-[-20%] right-0 text-[106px] 2xl:text-[146px] text-white">
                   My
                 </p>
               </div>
@@ -184,21 +227,6 @@ function App() {
           className="bgImage pb-[70%] relative"
           style={{ backgroundImage: `url(${imageWaterGif})` }}
         ></div>
-        {/* <div
-          className="bgImage pb-[71%] relative"
-          style={{ backgroundImage: `url(${bottomBgImg})` }}
-        >
-          <img
-            src={imgLake}
-            alt=""
-            className="absolute left-[50%] top-[50%]  -translate-x-1/2 -translate-y-1/2"
-          />
-          <img
-            src={flowAnimation}
-            alt=""
-            className="absolute left-[50%] top-[50%]  -translate-x-1/2 -translate-y-1/2"
-          />
-        </div> */}
       </div>
 
       {/* frame 7 */}
@@ -217,13 +245,55 @@ function App() {
               className="bgImage pt-[300px] relative"
               style={{ backgroundImage: `url(${imagenight})` }}
             >
-              <a
-                href="#frame8"
-                className="absolute text-[#fff] font-light bottom-[20%] left-[26%] text-[82px] opacity-70 hover:opacity-100 duration-200"
+              <p
+                onClick={() => {
+                  setShowLastNight2(!showLastNight2);
+                }}
+                className={`absolute text-[#E7444F] font-light top-[28%] 2xl:top-[30%] left-[30%] text-[93px] transition-all duration-200 ease-linear uppercase ${
+                  showLastNight2
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
+              >
+                Last Night
+              </p>
+              <p
+                onClick={() => {
+                  setShowLastNight2(!showLastNight2);
+                }}
+                className={`flex gap-4 font-light absolute bottom-[22%] 2xl:bottom-[25%] right-[24%] text-[93px] opacity-80 hover:opacity-100 transition-all duration-200 ease-linear ${
+                  showLastNight2
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
+              >
+                <span>AS I WAS</span>
+                <span className="text-[#E7444F]">SLEEPING</span>
+              </p>
+
+              {/* errror toggle */}
+              <p
+                onClick={() => {
+                  setShowLastNight2(!showLastNight2);
+                }}
+                className={`absolute text-[#fff] font-light bottom-[17%] 2xl:bottom-[18%] left-[26%] text-[93px] opacity-80 hover:opacity-100 transition-all duration-200 ease-linear ${
+                  !showLastNight2
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
               >
                 I DREAMT
-              </a>
-              <p className="flex gap-4 text-[#E7444F] font-light tex absolute top-[30%] right-[26%] text-[82px] rotate-[-6deg]">
+              </p>
+              <p
+                onClick={() => {
+                  setShowLastNight2(!showLastNight2);
+                }}
+                className={`flex gap-4 text-[#E7444F] font-light absolute top-[26%] 2xl:top-[28%] right-[26%] text-[93px] rotate-[-6deg] transition-all duration-200 ease-linear ${
+                  !showLastNight2
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
+              >
                 A MARVERLOUS ERROR
               </p>
             </div>
@@ -271,27 +341,27 @@ function App() {
           </div>
 
           {/*  */}
-          <div className="absolute left-[5%] top-[15%] leading-[120px]">
+          <div className="absolute left-[1%] 2xl:left-[5%] top-[15%] leading-[120px]">
             <p className="text-[#fff] uppercase text-[78px]">That a</p>
             <p className="text-[#D9495A] uppercase text-[125px]">fierry sun</p>
           </div>
-          <div className="absolute left-[5%] top-[40%]">
+          <div className="absolute left-[1%] 2xl:left-[5%] top-[40%]">
             <p className="text-[#D9495A] uppercase text-[197px]">Light</p>
           </div>
-          <div className="absolute left-[5%] top-[65%]">
+          <div className="absolute left-[1%] 2xl:left-[5%] top-[65%]">
             <p className=" uppercase text-[78px]">inside</p>
           </div>
           {/* right */}
-          <div className="absolute right-[5%] top-[20%]">
+          <div className="absolute right-[1%] 2xl:right-[5%] top-[20%]">
             <p className=" uppercase text-[142px]">was</p>
           </div>
-          <div className="absolute right-[5%] top-[30%]">
+          <div className="absolute right-[1%] 2xl:right-[5%] top-[30%]">
             <p className=" uppercase text-[197px] text-[#D9495A]">giving</p>
           </div>
-          <div className="absolute right-[5%] top-[55%]">
+          <div className="absolute right-[1%] 2xl:right-[5%] top-[52%]">
             <p className=" uppercase text-[105px]">my</p>
           </div>
-          <div className="absolute right-[5%] top-[60%]">
+          <div className="absolute right-[1%] 2xl:right-[5%] top-[60%]">
             <p className=" uppercase text-[146px] text-[#D9495A]">heart</p>
           </div>
         </div>
@@ -313,7 +383,7 @@ function App() {
               alt=""
             />
 
-            <div className="break-normal flex-1 text-[64px] leading-[64px] xxl:leading-[80px] uppercase font-light max-w-[520px] hover:opacity-60 duration-200">
+            <div className="break-normal flex-1 text-[64px] leading-[64px] xxl:leading-[80px] uppercase font-light max-w-[520px] hover:opacity-60 duration-200 text-center">
               <p>
                 It was <span className="text-[#D9495A]">fiery</span> because I
                 felt
@@ -360,19 +430,57 @@ function App() {
               className="bgImage absolute left-0 right-0 top-[0%] mt-[200px]"
               style={{ backgroundImage: `url(${imagenight})` }}
             >
-              <a
-                href="#frame8"
-                className="absolute text-[#E7444F] font-light top:-[10%] xl:top-[15%] left-[30%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+              <p
+                onClick={() => {
+                  setShowLastNight3(!showLastNight3);
+                }}
+                className={`absolute text-[#E7444F] font-light top-[3%] 2xl:top-[15%] left-[30%] text-[93px] transition-all duration-200 ease-linear uppercase ${
+                  showLastNight3
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
               >
                 Last Night
-              </a>
-              <a
-                href="#frame8"
-                className="flex gap-4 font-light absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+              </p>
+              <p
+                onClick={() => {
+                  setShowLastNight3(!showLastNight3);
+                }}
+                className={`flex gap-4 font-light absolute bottom-[-12%] 2xl:bottom-[2%] right-[24%] text-[93px] opacity-80 hover:opacity-100 transition-all duration-200 ease-linear ${
+                  showLastNight3
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
               >
                 <span>AS I WAS</span>
                 <span className="text-[#E7444F]">SLEEPING</span>
-              </a>
+              </p>
+
+              {/* errror toggle */}
+              <p
+                onClick={() => {
+                  setShowLastNight3(!showLastNight3);
+                }}
+                className={`absolute text-[#fff] font-light bottom-[-15%] 2xl:bottom-[-5%] left-[26%] text-[93px] opacity-80 hover:opacity-100 transition-all duration-200 ease-linear ${
+                  !showLastNight3
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
+              >
+                I DREAMT
+              </p>
+              <p
+                onClick={() => {
+                  setShowLastNight3(!showLastNight3);
+                }}
+                className={`flex gap-4 text-[#E7444F] font-light absolute top-[1%] 2xl:top-[10%] right-[26%] text-[93px] rotate-[-6deg] transition-all duration-200 ease-linear ${
+                  !showLastNight3
+                    ? "opacity-100 scale-100 "
+                    : "opacity-0 scale-0"
+                }`}
+              >
+                A MARVERLOUS ERROR
+              </p>
             </div>
           </div>
           <img
@@ -390,7 +498,7 @@ function App() {
           className="relative"
         >
           {/* night sleep */}
-          <div
+          {/* <div
             // className="relative"
             style={{ backgroundImage: `url(${startF52})` }}
           >
@@ -399,21 +507,21 @@ function App() {
               className="bgImage pt-[300px] relative"
               style={{ backgroundImage: `url(${imagenight})` }}
             >
-              <p className="absolute text-[#fff] font-light bottom-[20%] left-[26%] text-[82px]">
+              <p className="absolute text-[#fff] font-light bottom-[15%] 2xl:bottom-[18%] left-[26%] text-[93px]">
                 I DREAMT
               </p>
-              <p className="flex gap-4 text-[#E7444F] font-light tex absolute top-[30%] right-[26%] text-[82px] rotate-[-6deg]">
+              <p className="flex gap-4 text-[#E7444F] font-light tex absolute top-[25%] right-[26%] text-[93px] rotate-[-6deg]">
                 A MARVERLOUS ERROR
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* bg top */}
 
-          <div
+          {/* <div
             className="bgImage pb-[31%]  scale-105"
             style={{ backgroundImage: `url(${iCloudHumand})` }}
-          ></div>
+          ></div> */}
         </div>
         <div
           className="bgImage pb-[71%]"
@@ -440,14 +548,14 @@ function App() {
                 backgroundImage: `url(${imagenight})`,
               }}
             >
-              <p className="absolute text-[#E7444F] font-bold top:-[10%] xl:top-[15%] left-[30%] text-[82px]">
+              <p className="absolute text-[#E7444F] font-bold top-[3%] 2xl:top-[15%] left-[30%] text-[93px] uppercase">
                 Last Night
               </p>
-              <p className="flex gap-4 font-bold absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px]">
+              <p className="flex gap-4 font-bold absolute bottom-[-12%] 2xl:bottom-[2%] right-[24%] text-[93px]">
                 <span>AS I LAY</span>
                 <span className="text-[#E7444F]">SLEEPING</span>
               </p>
-              <p className="uppercase font-light text-[32px] absolute bottom-[-5%] xl:bottom-[2%] right-0 xl:right-[8%]">
+              <p className="uppercase font-light text-[37px] absolute bottom-[-5%] xl:bottom-[2%] right-0 xl:right-[8%]">
                 by antonio machado
               </p>
             </div>
