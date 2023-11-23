@@ -5,7 +5,10 @@ import midBgImg from "./assets/mid-bg.png";
 import midBgImgF8 from "./assets/bg-f8-middle.gif";
 import bottomBgImg from "./assets/bot-bg.png";
 import imageWater from "./assets/waterflow.gif";
-import imageWaterGif from "./assets/song-nuoc.gif";
+import imageWaterGif from "./assets/waterflow1.gif";
+import imgLake from "./assets/lake.png";
+import flowAnimation from "./assets/flow_ani.gif";
+
 import imageTear from "./assets/tear.png";
 import imageHeartBurn from "./assets/heart-burn.png";
 import imgHandOn from "./assets/hand-on.svg";
@@ -15,18 +18,12 @@ import eyeClose from "./assets/eyes.png";
 import iCloudHumand from "./assets/cloud-human.png";
 
 import imgBgF5 from "./assets/bg-f5.png";
-import startF5 from "./assets/star-gif.gif";
 import startF52 from "./assets/star-gif.gif";
 
 // frame 6
-import imgBgF6 from "./assets/bg-f6.png";
-import imgBgF6Heart from "./assets/bg-f6-heart.png";
-import imgBgF6Water from "./assets/bg-f6-water.png";
-import imgBgF6Group from "./assets/f6-group.png";
 import imgBgF6Bottom from "./assets/bg-f6-bottom.png";
 import imgBgF6Black from "./assets/bg-f6-black.png";
 import imgHeartGif from "./assets/heart.gif";
-import imgHeart from "./assets/heart.png";
 
 // f7
 import imgBgF7 from "./assets/bg-f7.png";
@@ -49,21 +46,24 @@ function App() {
             style={{ backgroundImage: `url(${startF52})` }}
           >
             <div
-              className="bgImage absolute left-0 right-0 top-[50%] -translate-y-1/2"
+              className="bgImage absolute left-0 right-0 top-[35%] -translate-y-1/2"
               style={{
                 backgroundImage: `url(${imagenight})`,
               }}
             >
               <a
                 href="#frame6"
-                className="absolute text-[#E7444F] font-bold xl:top-[15%] left-[30%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+                className="absolute text-[#E7444F] font-bold top:-[10%] xl:top-[15%] left-[30%] text-[82px] opacity-80 hover:opacity-100 duration-200"
               >
                 Last Night
               </a>
-              <p className="flex gap-4 font-bold absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px]">
+              <a
+                href="#frame6"
+                className="flex gap-4 font-bold absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+              >
                 <span>AS I LAY</span>
                 <span className="text-[#E7444F]">SLEEPING</span>
-              </p>
+              </a>
               <p className="uppercase font-light text-[32px] absolute bottom-[-5%] xl:bottom-[2%] right-0 xl:right-[8%]">
                 by antonio machado
               </p>
@@ -78,13 +78,19 @@ function App() {
               className="bgImage relative"
               style={{ backgroundImage: `url(${imagenight})` }}
             >
-              <p className="absolute text-[#E7444F] font-light top-[10%] xl:top-[20%] left-[30%] text-[70px]">
+              <a
+                href="#frame6"
+                className="absolute text-[#E7444F] font-light top:-[10%] xl:top-[15%] left-[30%]  text-[82px] opacity-80 hover:opacity-100 duration-200"
+              >
                 Last Night
-              </p>
-              <p className="flex gap-4 font-light absolute bottom-[-5%] xl:bottom-[8%] right-[25%] text-[70px]">
+              </a>
+              <a
+                href="#frame6"
+                className="flex gap-4 font-light absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+              >
                 <span>AS I WAS</span>
                 <span className="text-[#E7444F]">SLEEPING</span>
-              </p>
+              </a>
             </div>
 
             {/* cloud and people */}
@@ -113,11 +119,11 @@ function App() {
             >
               <a
                 href="#frame7"
-                className="absolute text-[#fff] font-light bottom-[23%] left-[26%] text-[65px] opacity-80 hover:opacity-100 duration-200"
+                className="absolute text-[#fff] font-light bottom-[20%] left-[26%] text-[82px] opacity-80 hover:opacity-100 duration-200"
               >
                 I DREAMT
               </a>
-              <p className="flex gap-4 text-[#E7444F] font-light tex absolute top-[30%] right-[26%] text-[65px] rotate-[-6deg]">
+              <p className="flex gap-4 text-[#E7444F] font-light absolute top-[30%] right-[26%] text-[82px] rotate-[-6deg]">
                 A MARVERLOUS ERROR
               </p>
             </div>
@@ -138,21 +144,27 @@ function App() {
         >
           <div className="absolute left-0 top-[10%] right-0 flex flex-col items-center justify-center">
             <div className="relative">
-              <p className="flex font-light text-[#E7444F] text-[100px] uppercase absolute left-[7%] top-[12%]">
-                <span className="text-white pr-5">that's a</span> spring
+              <p className="flex font-light text-[#E7444F]  uppercase absolute left-[7%] top-[0%] text-[137px] 2xl:text-[177px]">
+                <span className="text-white pr-5 text-[87px] 2xl:text-[127px]">
+                  that's a
+                </span>{" "}
+                spring
               </p>
-              <p className="flex font-light text-[#E7444F] text-[100px] uppercase absolute right-[10%] top-[15%]">
-                <span className="text-white pr-5">was</span> breaking
+              <p className="flex font-light text-[#E7444F] text-[137px] 2xl:text-[177px] uppercase absolute right-[5%] top-[10%]">
+                <span className="text-white pr-5 text-[87px] 2xl:text-[127px]">
+                  was
+                </span>{" "}
+                breaking
               </p>
-              <p className="flex font-light text-[#E7444F] text-[300px] uppercase absolute left-[6%] bottom-[-5%]">
+              <p className="flex font-light text-[#E7444F] text-[400px] 2xl:text-[502px] uppercase absolute left-[6%] bottom-[-5%]">
                 out
               </p>
-              <div className="flex font-light text-[#E7444F] text-[200px] uppercase absolute right-[5%] bottom-[1%]">
+              <div className="flex font-light text-[#E7444F] text-[250px] 2xl:text-[312px] uppercase absolute right-[5%] bottom-[0%]">
                 Heart
-                <p className="absolute top-0 left-0 text-[50px] text-white">
+                <p className="absolute top-[-20%] 2xl:top-[-20%] left-0 text-[91px] 2xl:text-[131px] text-white">
                   In
                 </p>
-                <p className="absolute top-0 right-0 text-[50px] text-white">
+                <p className="absolute top-[-20%] 2xl:top-[-20%] right-0 text-[91px] 2xl:text-[131px] text-white">
                   My
                 </p>
               </div>
@@ -170,8 +182,23 @@ function App() {
         {/* bg bottom f6*/}
         <div
           className="bgImage pb-[70%] relative"
-          style={{ backgroundImage: `url(${imageWater})` }}
+          style={{ backgroundImage: `url(${imageWaterGif})` }}
         ></div>
+        {/* <div
+          className="bgImage pb-[71%] relative"
+          style={{ backgroundImage: `url(${bottomBgImg})` }}
+        >
+          <img
+            src={imgLake}
+            alt=""
+            className="absolute left-[50%] top-[50%]  -translate-x-1/2 -translate-y-1/2"
+          />
+          <img
+            src={flowAnimation}
+            alt=""
+            className="absolute left-[50%] top-[50%]  -translate-x-1/2 -translate-y-1/2"
+          />
+        </div> */}
       </div>
 
       {/* frame 7 */}
@@ -192,11 +219,11 @@ function App() {
             >
               <a
                 href="#frame8"
-                className="absolute text-[#fff] font-light bottom-[23%] left-[26%] text-[65px] opacity-70 hover:opacity-100 duration-200"
+                className="absolute text-[#fff] font-light bottom-[20%] left-[26%] text-[82px] opacity-70 hover:opacity-100 duration-200"
               >
                 I DREAMT
               </a>
-              <p className="flex gap-4 text-[#E7444F] font-light tex absolute top-[30%] right-[26%] text-[65px] rotate-[-6deg]">
+              <p className="flex gap-4 text-[#E7444F] font-light tex absolute top-[30%] right-[26%] text-[82px] rotate-[-6deg]">
                 A MARVERLOUS ERROR
               </p>
             </div>
@@ -245,27 +272,27 @@ function App() {
 
           {/*  */}
           <div className="absolute left-[5%] top-[15%] leading-[120px]">
-            <p className="text-[#fff] uppercase text-[80px]">That a</p>
-            <p className="text-[#D9495A] uppercase text-[140px]">fierry sun</p>
+            <p className="text-[#fff] uppercase text-[78px]">That a</p>
+            <p className="text-[#D9495A] uppercase text-[125px]">fierry sun</p>
           </div>
           <div className="absolute left-[5%] top-[40%]">
-            <p className="text-[#D9495A] uppercase text-[220px]">Light</p>
+            <p className="text-[#D9495A] uppercase text-[197px]">Light</p>
           </div>
           <div className="absolute left-[5%] top-[65%]">
-            <p className=" uppercase text-[80px]">inside</p>
+            <p className=" uppercase text-[78px]">inside</p>
           </div>
           {/* right */}
           <div className="absolute right-[5%] top-[20%]">
-            <p className=" uppercase text-[140px]">was</p>
+            <p className=" uppercase text-[142px]">was</p>
           </div>
           <div className="absolute right-[5%] top-[30%]">
-            <p className=" uppercase text-[220px] text-[#D9495A]">giving</p>
+            <p className=" uppercase text-[197px] text-[#D9495A]">giving</p>
           </div>
           <div className="absolute right-[5%] top-[55%]">
-            <p className=" uppercase text-[80px]">my</p>
+            <p className=" uppercase text-[105px]">my</p>
           </div>
           <div className="absolute right-[5%] top-[60%]">
-            <p className=" uppercase text-[220px] text-[#D9495A]">heart</p>
+            <p className=" uppercase text-[146px] text-[#D9495A]">heart</p>
           </div>
         </div>
         {/* bg bottom */}
@@ -333,13 +360,19 @@ function App() {
               className="bgImage absolute left-0 right-0 top-[0%] mt-[200px]"
               style={{ backgroundImage: `url(${imagenight})` }}
             >
-              <p className="absolute text-[#E7444F] font-light xl:top-[20%] left-[30%] text-[70px]">
+              <a
+                href="#frame8"
+                className="absolute text-[#E7444F] font-light top:-[10%] xl:top-[15%] left-[30%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+              >
                 Last Night
-              </p>
-              <p className="flex gap-4 font-light absolute bottom-[-5%] xl:bottom-[8%] right-[25%] text-[70px]">
+              </a>
+              <a
+                href="#frame8"
+                className="flex gap-4 font-light absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px] opacity-80 hover:opacity-100 duration-200"
+              >
                 <span>AS I WAS</span>
                 <span className="text-[#E7444F]">SLEEPING</span>
-              </p>
+              </a>
             </div>
           </div>
           <img
@@ -366,10 +399,10 @@ function App() {
               className="bgImage pt-[300px] relative"
               style={{ backgroundImage: `url(${imagenight})` }}
             >
-              <p className="absolute text-[#fff] font-light bottom-[23%] left-[26%] text-[65px]">
+              <p className="absolute text-[#fff] font-light bottom-[20%] left-[26%] text-[82px]">
                 I DREAMT
               </p>
-              <p className="flex gap-4 text-[#E7444F] font-light tex absolute top-[30%] right-[26%] text-[65px] rotate-[-6deg]">
+              <p className="flex gap-4 text-[#E7444F] font-light tex absolute top-[30%] right-[26%] text-[82px] rotate-[-6deg]">
                 A MARVERLOUS ERROR
               </p>
             </div>
@@ -407,7 +440,7 @@ function App() {
                 backgroundImage: `url(${imagenight})`,
               }}
             >
-              <p className="absolute text-[#E7444F] font-bold xl:top-[15%] left-[30%] text-[82px]">
+              <p className="absolute text-[#E7444F] font-bold top:-[10%] xl:top-[15%] left-[30%] text-[82px]">
                 Last Night
               </p>
               <p className="flex gap-4 font-bold absolute bottom-[-12%] xl:bottom-[2%] right-[24%] text-[82px]">
